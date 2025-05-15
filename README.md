@@ -5,7 +5,7 @@
 
 ## Overview
 
-WAFgenius is a sophisticated web application designed to analyze AWS WAF (Web Application Firewall) logs, detect suspicious patterns, and visualize potential security threats. It provides security professionals with powerful insights into attack patterns that might otherwise go unnoticed in traditional log analysis tools.
+WAFgenius is a sophisticated Electron desktop application designed to analyze AWS WAF (Web Application Firewall) logs, detect suspicious patterns, and visualize potential security threats. It provides security professionals with powerful insights into attack patterns that might otherwise go unnoticed in traditional log analysis tools.
 
 ## Key Features
 
@@ -36,7 +36,51 @@ WAFgenius processes AWS WAF logs through a specialized parser that:
 3. **Correlates requests** to identify distributed attacks from common sources
 4. **Visualizes findings** through an intuitive, interactive dashboard
 
-The application uses a web worker architecture to process large log files efficiently without blocking the UI, ensuring a smooth user experience even with extensive datasets.
+The application uses an efficient architecture to process large log files without blocking the UI, ensuring a smooth user experience even with extensive datasets.
+
+## Prerequisites
+
+Before running WAFgenius, ensure you have:
+
+1. Node.js 18+ installed on your system
+2. The GeoLite2 City database file (required for IP geolocation)
+   - Download from MaxMind: https://dev.maxmind.com/geoip/geolite2-free-geolocation-data
+   - Place the `GeoLite2-City.mmdb` file in the root directory of the project
+
+## Getting Started
+
+### For Development
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Place the `GeoLite2-City.mmdb` file in the project root
+4. Run the Electron development environment:
+   ```
+   npm run electron:dev
+   ```
+   
+This will start both the Vite development server and the Electron application that connects to it.
+
+### For Production Use
+
+1. Build the application:
+   ```
+   npm run electron:build
+   ```
+   
+2. The packaged application will be available in the `release` directory
+
+## Technical Details
+
+Built with:
+- Electron for cross-platform desktop functionality
+- React.js frontend with Tailwind CSS for the UI
+- MaxMind GeoLite2 for IP geolocation (integrated via Electron's main process)
+- Recharts for data visualization
+- TypeScript for type safety and code reliability
 
 ## Security Insights
 
@@ -62,23 +106,7 @@ This signature indicates an attacker using AWS API Gateway to proxy and distribu
 
 ### Distributed Rate Limit Evasion
 
-WAFGenius correlates requests across multiple sources to identify coordinated attacks designed to stay under individual rate limits while achieving high aggregate request volumes.
-
-## Technical Details
-
-Built with:
-- React.js frontend with Tailwind CSS for the UI
-- Web Workers for asynchronous log processing
-- Recharts for data visualization
-- TypeScript for type safety and code reliability
-
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies with `npm install`
-3. Start the development server with `npm run dev`
-4. Upload WAF logs via the intuitive interface
-5. Explore the visual analysis and detailed findings
+WAFgenius correlates requests across multiple sources to identify coordinated attacks designed to stay under individual rate limits while achieving high aggregate request volumes.
 
 ## Use Cases
 
@@ -86,6 +114,11 @@ Built with:
 - **Threat Hunting**: Identify sophisticated attack patterns across your infrastructure
 - **Forensic Analysis**: Investigate the techniques used in successful or attempted breaches
 - **Security Education**: Understand common and advanced attack methodologies
+
+## Troubleshooting
+
+- **GeoIP Database Not Found**: Ensure `GeoLite2-City.mmdb` is in the project root directory
+- **Electron Application Fails to Start**: Check that the port specified in `electron/main.cjs` matches the port Vite is using (typically 8080)
 
 ## License
 
