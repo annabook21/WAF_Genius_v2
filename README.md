@@ -1,4 +1,4 @@
-# WAFgenius v2: DUB Edition
+# WAFgenius v2: DUB (DOGE Unmasking Box) Edition
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/Version-2.0.0-green.svg)
