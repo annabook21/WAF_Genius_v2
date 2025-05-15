@@ -1,11 +1,11 @@
-# WAFGenius v2: Advanced WAF Log Analysis Tool
+# WAFgenius v2: Advanced WAF Log Analysis Tool
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/Version-2.0.0-green.svg)
 
 ## Overview
 
-WAFGenius is a sophisticated web application designed to analyze AWS WAF (Web Application Firewall) logs, detect suspicious patterns, and visualize potential security threats. It provides security professionals with powerful insights into attack patterns that might otherwise go unnoticed in traditional log analysis tools.
+WAFgenius is a sophisticated web application designed to analyze AWS WAF (Web Application Firewall) logs, detect suspicious patterns, and visualize potential security threats. It provides security professionals with powerful insights into attack patterns that might otherwise go unnoticed in traditional log analysis tools.
 
 ## Key Features
 
@@ -29,7 +29,7 @@ WAFGenius is a sophisticated web application designed to analyze AWS WAF (Web Ap
 
 ## How It Works
 
-WAFGenius processes AWS WAF logs through a specialized parser that:
+WAFgenius processes AWS WAF logs through a specialized parser that:
 
 1. **Normalizes log data** into a consistent format regardless of source
 2. **Analyzes headers** to detect signs of manipulation or spoofing
@@ -40,7 +40,7 @@ The application uses a web worker architecture to process large log files effici
 
 ## Security Insights
 
-WAFGenius is particularly effective at detecting these sophisticated attack techniques:
+WAFgenius is particularly effective at detecting these sophisticated attack techniques:
 
 ### Header Spoofing
 
