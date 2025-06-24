@@ -242,4 +242,4 @@ MIT License - See LICENSE file for details.
 
 ---
 
-**For SDM Review**: This application demonstrates modern desktop application development practices, security-focused design, and provides significant business value for cybersecurity operations.
+**For Review**: This application demonstrates modern desktop application development practices, security-focused design, and provides significant business value for cybersecurity operations.
