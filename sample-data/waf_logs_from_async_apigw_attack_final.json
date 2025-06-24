@@ -1,0 +1,232 @@
+[
+  {
+    "timestamp": 1737042000000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-apigateway",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "API Gateway",
+    "httpSourceId": "api-id-0.execute-api.us-west-1.amazonaws.com",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-apigateway",
+        "limitKey": "IP",
+        "maxRateAllowed": 1000
+      }
+    ],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "54.219.131.112",
+      "uri": "/ProxyStage/api/status",
+      "args": "token=xyz0",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "httpx/0.28.0"
+        },
+        {
+          "name": "X-Forwarded-For",
+          "value": "176.32.119.85"
+        },
+        {
+          "name": "Host",
+          "value": "api-id-0.execute-api.us-west-1.amazonaws.com"
+        },
+        {
+          "name": "Authorization",
+          "value": "AWS4-HMAC-SHA256 Credential=fake-access-key-0/..."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042001000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-apigateway",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "API Gateway",
+    "httpSourceId": "api-id-1.execute-api.us-west-2.amazonaws.com",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-apigateway",
+        "limitKey": "IP",
+        "maxRateAllowed": 1000
+      }
+    ],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "34.223.12.48",
+      "uri": "/ProxyStage/api/status",
+      "args": "token=xyz1",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "httpx/0.28.0"
+        },
+        {
+          "name": "X-Forwarded-For",
+          "value": "23.45.67.89"
+        },
+        {
+          "name": "Host",
+          "value": "api-id-1.execute-api.us-west-2.amazonaws.com"
+        },
+        {
+          "name": "Authorization",
+          "value": "AWS4-HMAC-SHA256 Credential=fake-access-key-1/..."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042002000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-apigateway",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "API Gateway",
+    "httpSourceId": "api-id-2.execute-api.us-east-1.amazonaws.com",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-apigateway",
+        "limitKey": "IP",
+        "maxRateAllowed": 1000
+      }
+    ],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "52.23.133.56",
+      "uri": "/ProxyStage/api/status",
+      "args": "token=xyz2",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "httpx/0.28.0"
+        },
+        {
+          "name": "X-Forwarded-For",
+          "value": "118.24.36.82"
+        },
+        {
+          "name": "Host",
+          "value": "api-id-2.execute-api.us-east-1.amazonaws.com"
+        },
+        {
+          "name": "Authorization",
+          "value": "AWS4-HMAC-SHA256 Credential=fake-access-key-2/..."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042003000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-apigateway",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "API Gateway",
+    "httpSourceId": "api-id-3.execute-api.us-east-2.amazonaws.com",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-apigateway",
+        "limitKey": "IP",
+        "maxRateAllowed": 1000
+      }
+    ],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "18.220.93.184",
+      "uri": "/ProxyStage/api/status",
+      "args": "token=xyz3",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "httpx/0.28.0"
+        },
+        {
+          "name": "X-Forwarded-For",
+          "value": "5.188.62.140"
+        },
+        {
+          "name": "Host",
+          "value": "api-id-3.execute-api.us-east-2.amazonaws.com"
+        },
+        {
+          "name": "Authorization",
+          "value": "AWS4-HMAC-SHA256 Credential=fake-access-key-3/..."
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042004000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-apigateway",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "API Gateway",
+    "httpSourceId": "api-id-4.execute-api.us-west-1.amazonaws.com",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-apigateway",
+        "limitKey": "IP",
+        "maxRateAllowed": 1000
+      }
+    ],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "54.176.86.21",
+      "uri": "/ProxyStage/api/status",
+      "args": "token=xyz4",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "httpx/0.28.0"
+        },
+        {
+          "name": "X-Forwarded-For",
+          "value": "201.45.193.77"
+        },
+        {
+          "name": "Host",
+          "value": "api-id-4.execute-api.us-west-1.amazonaws.com"
+        },
+        {
+          "name": "Authorization",
+          "value": "AWS4-HMAC-SHA256 Credential=fake-access-key-4/..."
+        }
+      ]
+    }
+  }
+] 

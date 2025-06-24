@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 183 100% 47%; /* cyber-green */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 346 100% 58%; /* cyber-red */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 346 100% 58%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 183 100% 47%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-black text-foreground;
+  }
+
+  .cyber-border {
+    @apply border-2 border-cyber-green relative overflow-hidden;
+  }
+
+  .cyber-border::after {
+    content: '';
+    @apply absolute left-0 top-0 w-full h-1 bg-cyber-green opacity-50;
+    animation: scanline 8s linear infinite;
+  }
+
+  .cyber-panel {
+    @apply bg-cyber-dark rounded-md border border-cyber-green shadow-lg relative overflow-hidden;
+  }
+
+  .cyber-panel::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-transparent via-cyber-green/5 to-transparent pointer-events-none;
+  }
+
+  .cyber-glow {
+    @apply animate-pulse-glow;
+  }
+
+  .cyber-text {
+    @apply font-mono text-cyber-green;
+  }
+
+  .cyber-title {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-cyber-green via-cyan-300 to-cyber-blue font-bold;
+  }
+
+  .suspicious-item {
+    @apply bg-suspicious text-red-800 border-l-4 border-red-500;
+  }
+}

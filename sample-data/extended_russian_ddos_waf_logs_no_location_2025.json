@@ -1,0 +1,183 @@
+[
+  {
+    "timestamp": 1737042100000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-russia",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "ALB",
+    "httpSourceId": "alb-example-id",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-russia",
+        "limitKey": "IP",
+        "maxRateAllowed": 2000
+      }
+    ],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "194.58.112.174",
+      "uri": "/login",
+      "args": "",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "POST",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "massivebot/1.0"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042104000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "aws-AWSManagedRulesSQLiRuleSet",
+    "terminatingRuleType": "MANAGED_RULE_GROUP",
+    "action": "BLOCK",
+    "httpSourceName": "CloudFront",
+    "httpSourceId": "d123.cloudfront.net",
+    "ruleGroupList": [
+      {
+        "ruleGroupId": "AWS-AWSManagedRulesSQLiRuleSet",
+        "terminatingRule": {
+          "ruleId": "SQLi_BODY",
+          "action": "BLOCK"
+        }
+      }
+    ],
+    "rateBasedRuleList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "185.38.142.150",
+      "uri": "/search.php?q=' OR '1'='1",
+      "args": "q=' OR '1'='1",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "sqlbot/3.1"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042107000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-russia",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "ALB",
+    "httpSourceId": "alb-example-id",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-russia",
+        "limitKey": "IP",
+        "maxRateAllowed": 1000
+      }
+    ],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "45.155.204.140",
+      "uri": "/static/logo.png",
+      "args": "",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "Mozilla/5.0 (compatible; ddosbot/4.0; +http://attack.ru)"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042111000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "bot-user-agent",
+    "terminatingRuleType": "REGULAR",
+    "action": "BLOCK",
+    "httpSourceName": "ALB",
+    "httpSourceId": "alb-example-id",
+    "rateBasedRuleList": [],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "185.130.104.152",
+      "uri": "/api/checkout",
+      "args": "",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "POST",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "curl/7.81.0"
+        },
+        {
+          "name": "X-Forwarded-For",
+          "value": "34.204.28.112"
+        },
+        {
+          "name": "True-Client-IP",
+          "value": "34.204.28.112"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1737042115000,
+    "formatVersion": 1,
+    "webaclId": "example-web-acl-id",
+    "terminatingRuleId": "rate-limit-russia",
+    "terminatingRuleType": "RATE_BASED",
+    "action": "BLOCK",
+    "httpSourceName": "ALB",
+    "httpSourceId": "alb-example-id",
+    "rateBasedRuleList": [
+      {
+        "rateBasedRuleId": "rate-limit-russia",
+        "limitKey": "IP",
+        "maxRateAllowed": 1000
+      }
+    ],
+    "ruleGroupList": [],
+    "nonTerminatingMatchingRules": [],
+    "requestHeadersInserted": [],
+    "responseCodeSent": 403,
+    "httpRequest": {
+      "clientIp": "92.53.96.171",
+      "uri": "/products",
+      "args": "category=electronics",
+      "httpVersion": "HTTP/1.1",
+      "httpMethod": "GET",
+      "requestHeaders": [
+        {
+          "name": "User-Agent",
+          "value": "bot-traffic/9.1"
+        }
+      ]
+    }
+  }
+] 
